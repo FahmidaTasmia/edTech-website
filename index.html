@@ -273,7 +273,54 @@
   </section>
   <!-- elaring-institiute section end -->
 
+<!-- Subscribe section start -->
+<section class="container subscribe mt-5 py-5 px-5 rounded">
+<div class="row m-auto">
+  <div class="col-lg-6 col-md-12 ">
+    <h3 class="fw-semibold text-white">Ready to join?</h3>
+    <p class="fs-6 text-white">
+      It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
+    </p>
+  </div>
+  <div class="col-lg-6 col-md-12 m-auto text-center">
+    <div id="liveAlertPlaceholder"></div>
+  <button type="button" class="btn bg-white text-primary" id="liveAlertBtn">Register Now</button>
+  </div>
+</div>
+</section>
+<!-- Subscribe section end -->
 
+<!-- Student-section start -->
+<section class="mt-5">
+
+</section>
+<!-- Student-section end -->
+
+
+
+
+<script>
+  const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
+
+const alert = (message, type) => {
+  const wrapper = document.createElement('div')
+  wrapper.innerHTML = [
+    `<div class="alert alert-${type} alert-dismissible" role="alert">`,
+    `   <div>${message}</div>`,
+    '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
+    '</div>'
+  ].join('')
+
+  alertPlaceholder.append(wrapper)
+}
+
+const alertTrigger = document.getElementById('liveAlertBtn')
+if (alertTrigger) {
+  alertTrigger.addEventListener('click', () => {
+    alert('Nice, you Successfuly Registerd!', 'success')
+  })
+}
+</script>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous">
